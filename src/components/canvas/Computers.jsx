@@ -42,7 +42,7 @@ const ComputersCanvas = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 500); // Adjust width as needed
+      setIsMobile(window.innerWidth <= 768); // Adjust width as needed
     };
   
     handleResize(); // Set initial value
