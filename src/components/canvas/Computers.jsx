@@ -42,7 +42,7 @@ const ComputersCanvas = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust width as needed
+      setIsMobile(window.innerWidth <= 500); // Adjust width as needed
     };
   
     handleResize(); // Set initial value
@@ -52,29 +52,15 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
-    <Canvas
-      frameloop="demand"
-      shadows
-      dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      {/* Suspense for fallback loader */}
-      <Suspense fallback={<CanvasLoader />}>
-        {/* Orbit Controls */}
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-
-        {/* 3D Computer Model */}
-        <Computers isMobile={isMobile} />
-      </Suspense>
-
-      {/* Preload Assets */}
-      <Preload all />
-    </Canvas>
+    !isMobile && ( // Hide the 3D model only on mobile screens
+      <Canvas frameloop="demand" shadows dpr={[1, 2]} camera={{ position: [20, 3, 5], fov: 25 }} gl={{ preserveDrawingBuffer: true }}>
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
+          <Computers isMobile={isMobile} />
+        </Suspense>
+        <Preload all />
+      </Canvas>
+    )
   );
 };
 
