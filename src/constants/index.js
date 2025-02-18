@@ -16,7 +16,7 @@ import {
     figma,
     docker,
     meta,
-    // starbucks,
+    starbucks,
     tesla,
     shopify,
     carrent,
@@ -258,6 +258,27 @@ import {
       ],
       image: tripguide,
       source_code_link: "https://github.com/shrutisoni08/Quiz-Buzz",
+    },
+    {
+      name: "FlexiCalc",
+      description:
+        "I developed an interactive and user-friendly calculator application, FlexiCalc, using React, Tailwind CSS, and React DnD. This project offers a seamless drag-and-drop interface, keyboard support, and undo/redo functionality, making complex calculations intuitive and efficient for users.",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "green-text-gradient",
+        },
+        {
+          name: "javascript",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: starbucks,
+      source_code_link: "https://flexicalc.netlify.app/",
     },
   ];
   
