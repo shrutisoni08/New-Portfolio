@@ -24,6 +24,9 @@ import {
     tripguide,
     threejs,
   } from "../../public/assets";
+  import blog from "../../public/assets/company/blog.png"
+  import shop from "../../public/assets/company/shoppersworld.png"
+
   
   export const navLinks = [
     {
@@ -197,6 +200,27 @@ import {
   
   const projects = [
     {
+      name: "Shoppers World",
+      description:
+        "Shoppers World is a React.js e-commerce app with Firebase Authentication, Bootstrap, and a dynamic shopping cart. It features protected routes, responsive design, and a sleek UI with smooth animations.  It features user authentication, dynamic product pages, a shopping cart, and protected routes for a seamless shopping experience.🚀",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "framer-motion",
+          color: "green-text-gradient",
+        },
+        {
+          name: "firebase",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: shop,
+      source_code_link: "https://shoppers-world.netlify.app/",
+    },
+    {
       name: "The Coders Cafe",
       description:
         "I created The Coders Cafe, a modern single-page frontend project built using React, Framer Motion, and TailwindCSS. This project showcases a clean, responsive, and visually appealing food website designed to captivate users and provide an engaging browsing experience.",
@@ -260,6 +284,27 @@ import {
       source_code_link: "https://github.com/shrutisoni08/Quiz-Buzz",
     },
     {
+      name: "Fashion-Plaza",
+      description:
+        "Fashion Plaza: Your Style Destination Elevate Your Style Discover the latest trends and timeless classics at Fashion Plaza. We're your one-stop shop for all your fashion needs, offering a curated selection of clothing, accessories, and footwear.",
+      tags: [
+        {
+          name: "WordPress",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Elementor",
+          color: "green-text-gradient",
+        },
+        {
+          name: "javascript",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: blog,
+      source_code_link: "https://fashion-plaza.netlify.app/",
+    },
+    {
       name: "FlexiCalc",
       description:
         "I developed an interactive and user-friendly calculator application, FlexiCalc, using React, Tailwind CSS, and React DnD. This project offers a seamless drag-and-drop interface, keyboard support, and undo/redo functionality, making complex calculations intuitive and efficient for users.",
@@ -281,5 +326,4 @@ import {
       source_code_link: "https://flexicalc.netlify.app/",
     },
   ];
-  
   export { services, technologies, experiences, testimonials, projects };
